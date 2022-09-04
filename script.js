@@ -3,7 +3,7 @@ var textoFinal;
 const letras = ["a","e","i","o","u"]
 const letrasEnc = ["ai","enter","imes","ober","ufat"]
 
-function desencriptar() {
+function desencriptar(myvalue) {
     textoOriginal = document.getElementById("textoEncriptable").value;
     textoFinal = textoOriginal.toLowerCase();
     for(i = 0; i <letras.length; i++) {
@@ -14,7 +14,7 @@ function desencriptar() {
     mostrarTexto();
 }
 
-function encriptar() {
+function encriptar(myvalue) {
     textoOriginal = document.getElementById("textoEncriptable").value;
     textoFinal = textoOriginal.toLowerCase();
     for(i = 0; i <letras.length; i++) {

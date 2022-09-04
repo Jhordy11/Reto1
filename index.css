@@ -79,11 +79,12 @@ header{
     font-size: 90%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    transition: 600ms;
+    transition: 1s all;
     width: 45%;
     height: 100%;
     border: 1px solid #0A3871;
     box-shadow:3px 10px 10px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .boton:first-child{
@@ -94,13 +95,14 @@ header{
 
 
 .boton:nth-child(2){
-    background: #FFFFFF;
+    background:rgba(255,255,255,0.5);
     color: #0A3871;
     
 }
 .boton:hover{
     background:#4976AD;
     color: #FFFFFF;
+    transform: scale(1.05);
 }
 
 .contenedorResultados {
@@ -156,6 +158,12 @@ footer p{
     height:10%;
     background:none;
 }
+
+.contenedorResultados .boton:hover{
+    background:rgba(73,118,173,0.5);
+    color: #FFFFFF;
+}
+
 
 @media screen and (max-width:880px) {
     html, body{

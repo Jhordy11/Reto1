@@ -28,8 +28,9 @@ function encriptar() {
 function copiarTexto(){
     var content = document.getElementById('textoResultado');
     content.select();
-    document.execCommand('copy');
-
+    navigator.clipboard.writeText(content.value)
+    mensaje.value = "";
+    alert("Texto Copiado")
 }
 
 function mostrarTexto(){

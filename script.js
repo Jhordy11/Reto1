@@ -38,13 +38,13 @@ function mostrarTexto(){
         document.querySelector(".contenedorResultados").innerHTML='<img src="imagenes/Muñeco.png" alt="muñeco" class="imagen3"> <p class="aviso">Ningún mensaje fue encontrado</p> <p class="aviso">Ingrese el texto que desea encriptar o desencriptar.</p>'
         return;
     }
-    if(document.querySelector(".contenedorResultados").innerHTML == '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <input type="submit" onclick="copiarTexto()" class="boton" value="Copiar"/>'){
+    if(document.querySelector(".contenedorResultados").innerHTML == '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <button class="boton" onclick="copiarTexto()">Copiar</button>'){
         document.getElementById("textoResultado").innerHTML=textoFinal;
         return;
     }
 
     document.querySelector(".contenedorResultados").innerHTML=""
-    document.querySelector(".contenedorResultados").innerHTML= '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <input type="submit" onclick="copiarTexto()" class="boton" value="Copiar"/>'
+    document.querySelector(".contenedorResultados").innerHTML= '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <button class="boton" onclick="copiarTexto()">Copiar</button>'
     document.getElementById("textoResultado").innerHTML=textoFinal;
     
     

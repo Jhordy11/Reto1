@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="/script.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+            <img src="imagenes/Vector.png" alt="logoAlura" class="imagen1">
+    </header>
+    <main class="encriptador">
+        <div class="contenedorEntrada">
+            <textarea id="textoEncriptable" cols="70" rows="10" class="textArea" required placeholder="Ingrese el texto aqui"></textarea>
+            
+            <p><img src="imagenes/Vector2.png" class="imagen2">  Solo letras minúsculas y sin acentos</p>
+            <div class="botones">
+                <input type="submit" onclick="encriptar()" class="boton" value="Encriptar">
+                <input type="submit" onclick="desencriptar()" id="botonDesencript" class="boton" value="Desencriptar">
+            </div>
+        </div>
+        <div class="contenedorResultados">
+            <textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <input type="submit" onclick="copiarTexto()" class="boton" value="Copiar"/>
+        </div>
+    </main>
+    <footer>
+        <p>©Copyright - Oracle Programa ONE - Jhordy Aguas </p>
+    </footer>
+    
+</body>
+</html>

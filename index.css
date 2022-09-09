@@ -1,9 +1,16 @@
 html, body{
     font-family: 'Montserrat', sans-serif;
     height: 100%;
+    width: 100%;
     background: linear-gradient(#E5E5E5,#85BCFF 95%) ;
 }
-
+html{
+    display: flex;
+}
+.contenedor{
+    width: 100%;
+    height: 100%;
+}
 header,.encriptador,.contenedorEntrada,.contenedorResultados {
     display: inline-block;
     vertical-align: top;
@@ -11,7 +18,7 @@ header,.encriptador,.contenedorEntrada,.contenedorResultados {
 
 .encriptador{
     width: 90%;
-    height: 93%;
+    height: 92%;
 
 }
 
@@ -111,18 +118,59 @@ header{
     box-shadow: 0px 24px 32px 2px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     margin-top:2%;
+}
+
+.resultados{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultadoVacio{
+    text-align: center;
+}
+
+.resultado{
+    display:none;
     text-align:center;
-    
+    height:100%;
+    width:100%;
+    background:none;
+}
+
+#textoResultado{
+    width:80%;
+    height:70%;
+    margin:0;
+    margin-top: 10%;
+}
+
+#textoResultado::selection{
+    background:none;
+}
+
+.resultado .boton{
+    margin:0;
+    margin-top: 15%;
+    width:80%;
+    height:10%;
+    background:none;
+}
+
+.resultado .boton:hover{
+    background:rgba(73,118,173,0.5);
+    color: #FFFFFF;
 }
 
 .imagen3{
-    width: 60%;
-    margin:50% 0 2% 0;
+    width: 70%;
+    margin:0 0 3% 0;
     
 }
 
 .aviso{
-    margin:2% 0;
+    margin:2% 0%;
     font-size:20px;
     font-weight:bold;
 }
@@ -135,21 +183,23 @@ footer{
     background-color: #0A3871;
     text-align: center;
     color: #FFFFFF;
-    height:7%;
+    height:8%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .redes{
     width: auto;
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 1px;
+    padding-bottom: 0.3%;
 
 }
 
 .github, .linkedin{
     display:inline-block;
-    width: 30px; 
-    height:30px;
+    width: 24px; 
+    height:24px;
 }
 
 .github{
@@ -157,37 +207,20 @@ footer{
 }
 
 footer p{
-    padding-top:0.3%;
     font-weight: bold;
     text-shadow:0.1em 0.1em 0.2em black;
     font-size:70%;
 }
 
-#textoResultado{
-    width:80%;
-    height:70%;
-    margin:0;
-    margin-top: 10%;
+.textAlerta{
+    text-align: center;
+    font-weight: bold;
 }
-
-.contenedorResultados .boton{
-    margin:0;
-    margin-top: 15%;
-    width:80%;
-    height:10%;
-    background:none;
-}
-
-.contenedorResultados .boton:hover{
-    background:rgba(73,118,173,0.5);
-    color: #FFFFFF;
-}
-
 
 @media screen and (max-width:880px) {
     html, body{
+        display: block;
         height: auto;
-
     }
     header,.encriptador,.contenedorEntrada,.contenedorResultados {
         display: block;
@@ -206,7 +239,7 @@ footer p{
     }
     .contenedorEntrada{
         width: 90%;
-        height: 600px;
+        height: 50%;
         padding:0 5%;
     }
     .contenedorEntrada p{
@@ -224,7 +257,7 @@ footer p{
     .contenedorResultados{
         width: 90%;
         padding-bottom: 30px;
-        margin:7% 5%;
+        margin:4% 5%;
     }
     
     #textoEncriptable,#textoResultado,.contenedorResultados{
@@ -234,7 +267,7 @@ footer p{
     }
 
     .imagen2{
-        padding-left: 18%;
+        padding-left:30px;
     }
     
     .imagen3{
@@ -275,6 +308,8 @@ footer p{
     }
     .imagen2{
         margin-bottom: 10px ;
+        padding-left:20px;
+        
     }
     .boton{
         padding:1% 0;
@@ -282,5 +317,8 @@ footer p{
     .github, .linkedin{
         width: 15px; 
         height:15px;
+    }
+    .aviso{
+        margin:2% 5%;
     }
 }

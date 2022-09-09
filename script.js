@@ -1,11 +1,15 @@
+
+
 var textoOriginal;
 var textoFinal;
 var numero;
 var letra1;
+const vacio = document.querySelector(".resultadoVacio");
+const resultado = document.querySelector(".resultado");
 const letras = ["a","e","i","o","u"]
 const letrasEnc = ["ai","enter","imes","ober","ufat"]
 
-function desencriptar(myvalue) {
+function desencriptar() {
     textoOriginal = document.getElementById("textoEncriptable").value;
     textoFinal = textoOriginal.toLowerCase();
     for(i = 0; i <letras.length; i++) {
@@ -16,7 +20,7 @@ function desencriptar(myvalue) {
     mostrarTexto();
 }
 
-function encriptar(myvalue) {
+function encriptar() {
     textoOriginal = document.getElementById("textoEncriptable").value;
     textoOriginal = textoOriginal.toLowerCase();
     textoFinal = "";
@@ -44,23 +48,30 @@ function copiarTexto(){
     var content = document.getElementById('textoResultado');
     content.select();
     navigator.clipboard.writeText(content.value)
+    content.select();
+    Swal.fire({
+        icon:"success",
+        width:"200px",
+        html: '<div class="textAlerta">Texto Copiado</div>',
+        background:"none",
+        toast: true,
+        position: "top",
+        backdrop: false,
+        showConfirmButton: false,
+        timer: 1000
+        });
 }
 
 function mostrarTexto(){
     if(textoFinal == ""){
-        document.querySelector(".contenedorResultados").innerHTML=""
-        document.querySelector(".contenedorResultados").innerHTML='<img src="imagenes/Muñeco.png" alt="muñeco" class="imagen3"> <p class="aviso">Ningún mensaje fue encontrado</p> <p class="aviso">Ingrese el texto que desea encriptar o desencriptar.</p>'
+        vacio.style.display = "block";
+        resultado.style.display = "none";
         return;
-    }
-    if(document.querySelector(".contenedorResultados").innerHTML == '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <button class="boton" onclick="copiarTexto()">Copiar</button>'){
+    }else{
+        vacio.style.display = "none";
+        resultado.style.display = "block";
         document.getElementById("textoResultado").innerHTML=textoFinal;
-        return;
     }
-
-    document.querySelector(".contenedorResultados").innerHTML=""
-    document.querySelector(".contenedorResultados").innerHTML= '<textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly></textarea> <button class="boton" onclick="copiarTexto()">Copiar</button>'
-    document.getElementById("textoResultado").innerHTML=textoFinal;
-    
     
 }
 

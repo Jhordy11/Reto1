@@ -14,30 +14,41 @@
     <title>Encriptador</title>
 </head>
 <body>
-    <header>
-            <img src="imagenes/Vector.png" alt="logoAlura" class="imagen1">
-    </header>
-    <main class="encriptador">
-        <div class="contenedorEntrada">
-            <textarea id="textoEncriptable" cols="70" rows="10" class="textArea" required placeholder="Ingrese el texto aqui"></textarea>
-            
-            <p><img src="imagenes/Vector2.png" class="imagen2">  Solo letras minúsculas y sin acentos</p>
-            <div class="botones">
-                <button class="boton" onclick="encriptar(this)" >Encriptar</button>
-                <button class="boton" onclick="desencriptar(this)" >Desencriptar</button>
+        <header>
+                <img src="imagenes/Vector.png" alt="logoAlura" class="imagen1">
+        </header>
+        <main class="encriptador">
+            <div class="contenedorEntrada">
+                <textarea id="textoEncriptable" cols="70" rows="10" class="textArea" required placeholder="Ingrese el texto aqui"></textarea>
+                
+                <p><img src="imagenes/Vector2.png" class="imagen2">  Solo letras minúsculas y sin acentos</p>
+                <div class="botones">
+                    <button class="boton" onclick="encriptar()" >Encriptar</button>
+                    <button class="boton" onclick="desencriptar()" >Desencriptar</button>
+                </div>
             </div>
-        </div>
-        <div class="contenedorResultados">
-            <img src="imagenes/Muñeco.png" alt="muñeco" class="imagen3"> <p class="aviso">Ningún mensaje fue encontrado</p> <p class="aviso">Ingrese el texto que desea encriptar o desencriptar.</p>
-        </div>
-    </main>
-    <footer>
-        <div class="redes">
-            <a href="https://github.com/Jhordy11"><img  class="github" src="imagenes/git.png" alt="logo de github" /></a>
-            <a href="https://www.linkedin.com/in/jhordy-aguas-333937249"><img class="linkedin" src="imagenes/linkedin.png" alt="logo de linkedin"/></a>
-        </div>
-        <p>©Copyright - Oracle Programa ONE - Jhordy Aguas </p>
-    </footer>
-    <script src="script.js"></script>
+            <div class="contenedorResultados">
+                <div class="resultados">
+                    <div class="resultadoVacio">
+                        <img src="imagenes/Muñeco.png" alt="muñeco" class="imagen3"> <p class="aviso">Ningún mensaje fue encontrado</p> <p class="aviso">Ingrese el texto que desea encriptar o desencriptar.</p>
+                    </div>
+                    <div class="resultado">
+                        <textarea id="textoResultado" cols="70" rows="10" class="textArea" readonly >ddd</textarea> <button class="boton" onclick="copiarTexto()">Copiar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <footer>
+            <div>
+                <div class="redes">
+                    <a href="https://github.com/Jhordy11"><img  class="github" src="imagenes/git.png" alt="logo de github" /></a>
+                    <a href="https://www.linkedin.com/in/jhordy-aguas-333937249"><img class="linkedin" src="imagenes/linkedin.png" alt="logo de linkedin"/></a>
+                </div>
+                <p>©Copyright - Oracle Programa ONE - Jhordy Aguas </p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

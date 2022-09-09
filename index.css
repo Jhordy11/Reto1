@@ -11,7 +11,7 @@ header,.encriptador,.contenedorEntrada,.contenedorResultados {
 
 .encriptador{
     width: 90%;
-    height: 95%;
+    height: 90%;
 
 }
 
@@ -82,8 +82,8 @@ header{
     transition: 1s all;
     width: 45%;
     height: 100%;
-    border: 1px solid #0A3871;
-    box-shadow:3px 10px 10px 3px rgba(0, 0, 0, 0.1);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
 
@@ -136,12 +136,32 @@ footer{
     text-align: center;
     color: #FFFFFF;
     height:5%;
+    height:auto;
 
 }
+.redes{
+    width: auto;
+    height: auto;
+    
+    padding-bottom: 0.3%;
+
+}
+
+.github, .linkedin{
+    display:inline-block;
+    width: 30px; 
+    height:30px;
+}
+
+.github{
+    padding-right: 0.5%;
+}
+
 footer p{
     padding-top:0.3%;
     font-weight: bold;
     text-shadow:0.1em 0.1em 0.2em black;
+    font-size:70%;
 }
 
 #textoResultado{
@@ -225,9 +245,19 @@ footer p{
     footer{
         background-color: #0A3871; 
     }
+
+    .redes{
+        padding-top:2%;
+        padding-bottom: 0;
+    }
+    .github, .linkedin{
+        width: 25px; 
+        height:25px;
+    }
+
     footer p{
         font-size:10px;
-        padding: 3%;
+        padding: 1%;
     }
     .contenedorResultados .boton{
         padding:4% 0;
@@ -249,5 +279,9 @@ footer p{
     }
     .boton{
         padding:1% 0;
+    }
+    .github, .linkedin{
+        width: 15px; 
+        height:15px;
     }
 }

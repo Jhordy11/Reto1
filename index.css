@@ -11,7 +11,7 @@ header,.encriptador,.contenedorEntrada,.contenedorResultados {
 
 .encriptador{
     width: 90%;
-    height: 90%;
+    height: 93%;
 
 }
 
@@ -132,18 +132,17 @@ header{
     font-weight:none;
 }
 footer{
-    background-color: #85BCFF;
+    background-color: #0A3871;
     text-align: center;
     color: #FFFFFF;
-    height:5%;
-    height:auto;
+    height:7%;
 
 }
 .redes{
     width: auto;
     height: auto;
-    
-    padding-bottom: 0.3%;
+    padding-top: 10px;
+    padding-bottom: 1px;
 
 }
 
